@@ -9,11 +9,10 @@ import javax.ws.rs.core.Application
 @OpenAPIDefinition(
 		info = Info(
 				title="Benchmarx API",
-				version = "1.0.1",
+				version = "0.1",
 				contact = Contact(
-						name = "Example API Support",
-						url = "http://exampleurl.com/contact",
-						email = "techsupport@example.com"),
+						name = "Developer",
+						url = "http://github.com/K0zka"),
 				license = License(
 						name = "Apache 2.0",
 						url = "http://www.apache.org/licenses/LICENSE-2.0.html"))

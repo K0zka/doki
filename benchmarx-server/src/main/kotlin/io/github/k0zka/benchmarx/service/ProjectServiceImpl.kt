@@ -14,15 +14,15 @@ class ProjectServiceImpl : ProjectService {
 	lateinit var mongoClient : MongoClient
 
 	override fun getById(id: UUID): Project =
-		mongoClient.projectCollection.getById(id.toString())
+		mongoClient.project.getById(id.toString())
 
 	override fun list(): List<Project> =
-		mongoClient.projectCollection.find().map {
+		mongoClient.project.find().map {
 			read<Project>(it)
 		}.toList()
 
 	override fun create(project: Project) {
-		mongoClient.projectCollection
+		mongoClient.project
 				.insertOne(Document.parse(objectMapper.writeValueAsString(project)))
 	}
 

@@ -14,15 +14,27 @@ val objectMapper = ObjectMapper().apply {
 
 val MongoClient.database: MongoDatabase get() = this.getDatabase("benchmarx")
 
-val MongoClient.projectCollection: MongoCollection<Document> get() = this.database.getCollection("projects")
+val MongoClient.project: MongoCollection<Document> get() = this.database.getCollection("projects")
 
-val MongoClient.tokenCollection: MongoCollection<Document> get() = this.database.getCollection("projects")
+val MongoClient.token: MongoCollection<Document> get() = this.database.getCollection("tokens")
+
+val MongoClient.jmh: MongoCollection<Document> get() = this.database.getCollection("jmh")
+
+val MongoClient.cucumber: MongoCollection<Document> get() = this.database.getCollection("cucumber")
+
+val MongoClient.junit: MongoCollection<Document> get() = this.database.getCollection("junit")
 
 inline fun <reified T> MongoCollection<Document>.getById(id: String) =
 		read<T>(this.find(BasicDBObject("_id", id)).single())
 
 inline fun <reified T> MongoCollection<Document>.listBy(property: String, value: String) =
 		this.find(BasicDBObject(property, value)).map { read<T>(it) }.toList()
+
+inline fun <reified T> MongoCollection<Document>.listBy(properties : Map<String, String>) =
+		this.find(BasicDBObject(properties)).map { read<T>(it) }.toList()
+
+inline fun MongoCollection<Document>.deleteBy(properties : Map<String, String>) =
+		this.deleteOne(BasicDBObject(properties))
 
 fun <T> MongoCollection<Document>.insert(entity: T) =
 		insertOne(Document.parse(objectMapper.writeValueAsString(entity)))

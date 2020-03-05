@@ -16,17 +16,31 @@ class TokenServiceImpl : TokenService {
 	lateinit var mongoClient: MongoClient
 
 	override fun listByProject(projectId: UUID): List<Token> =
-			mongoClient.tokenCollection.listBy(Token::projectId.name, projectId.toString())
+			mongoClient.token.listBy(Token::projectId.name, projectId.toString())
 
-	override fun generateToken(projectId: UUID): Token {
-		val token = Token(
-				token = genPassword(length = 64),
-				id = randomUUID(),
-				generated = now(),
-				projectId = projectId
+	override fun generateToken(projectId: UUID): Token = Token(
+			token = genPassword(length = 64),
+			id = randomUUID(),
+			generated = now(),
+			projectId = projectId
+	).apply { mongoClient.token.insert(this) }
+
+	override fun checkToken(projectId: UUID, token: String) {
+		check(mongoClient.token.listBy<Token>(
+				mapOf(
+						Token::projectId.name to projectId.toString(),
+						Token::token.name to token
+				)
+		).isNotEmpty())
+	}
+
+	override fun removeToken(projectId: UUID, token: String) {
+		mongoClient.token.deleteBy(
+				mapOf(
+						Token::projectId.name to projectId.toString(),
+						Token::token.name to token
+				)
 		)
-		mongoClient.tokenCollection.insert(token)
-		return token
 	}
 
 }
