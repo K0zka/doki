@@ -17,6 +17,11 @@
 	<description>uploads various benchmark results to benchmarx</description>
 	<packaging>maven-plugin</packaging>
 	<inceptionYear>2020</inceptionYear>
+	<url>https://github.com/K0zka/benchmarx</url>
+	<issueManagement>
+		<system>github</system>
+		<url>https://github.com/K0zka/benchmarx/issues</url>
+	</issueManagement>
 
 	<dependencies>
 		<dependency>
@@ -63,6 +68,24 @@
 		<sourceDirectory>src/main/kotlin</sourceDirectory>
 		<testSourceDirectory>src/test/kotlin</testSourceDirectory>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-plugin</artifactId>
+				<version>${maven.api.version}</version>
+				<executions>
+					<execution>
+						<id>default-descriptor</id>
+						<phase>process-classes</phase>
+					</execution>
+					<!-- if you want to generate help goal -->
+					<execution>
+						<id>help-goal</id>
+						<goals>
+							<goal>helpmojo</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.jetbrains.kotlin</groupId>
 				<artifactId>kotlin-maven-plugin</artifactId>
