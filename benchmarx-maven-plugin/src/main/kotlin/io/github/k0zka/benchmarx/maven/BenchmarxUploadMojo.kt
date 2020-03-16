@@ -12,6 +12,12 @@ class BenchmarxUploadMojo : AbstractMojo() {
 	@Parameter
 	internal var jmhResults : File? = null
 
+	@Parameter
+	internal var cucumberResults : File? = null
+
+	@Parameter(defaultValue = "target/surefire-reports")
+	internal var junitResults : File? = null
+
 	override fun execute() {
 		TODO("not implemented")
 	}

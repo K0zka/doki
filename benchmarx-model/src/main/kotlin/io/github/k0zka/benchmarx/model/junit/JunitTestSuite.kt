@@ -4,6 +4,6 @@ data class JunitTestSuite(
 		val name : String,
 		val time: String,
 		val tests : Int,
-		val suites : List<JunitTestSuite>,
+		val cases : List<JunitTestCase>,
 		val properties : Map<String, String>
 )
