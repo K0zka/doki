@@ -30,10 +30,11 @@ internal class ProcessKtTest {
 		}
 	}
 
-//	@Test
-//	fun findCucumberResults() {
-//		TODO()
-//	}
+	@Test
+	fun findCucumberResults() {
+		val junitResults = findCucumberResults(File("src/test/resources/cucumber/ProcessKtTest/findCucumberResults"))
+		assertTrue(junitResults.isNotEmpty())
+	}
 //
 //	@Test
 //	fun findJmhResults() {
