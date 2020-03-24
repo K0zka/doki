@@ -11,8 +11,9 @@ data class JmhBenchmarkResult(
 		val jvm : String,
 		val jvmArgs : List<String>,
 		val jdkVersion : String,
-		val vmName : String,
+		val vmName : String? = null,
 		val vmVersion : String,
+		val warmupIterations : Int,
 		val warmupTime: String,
 		val warmupBatchSize: Int,
 		val measurementIterations: Int,
@@ -20,8 +21,9 @@ data class JmhBenchmarkResult(
 		val measurementBatchSize: Int,
 		val params : Map<String, String> = mapOf(),
 		val primaryMetric: JmhMetric,
-		override val branch: String,
-		override val version: String,
-		override val recorded: Long?,
-		override val submitted: Long
+		val secondaryMetrics : Map<String, Any> = mapOf(),
+		override val branch: String? = null,
+		override val version: String? = null,
+		override val recorded: Long? = null,
+		override val submitted: Long? = null
 ) : Versioned

@@ -29,8 +29,11 @@ private val jsonObjectMapper by lazy {
 			.enable(MapperFeature.ACCEPT_CASE_INSENSITIVE_ENUMS)
 }
 
+fun File.listFilesEndingWith(suffix: String): List<File> = this
+		.listFiles { _, name -> name.endsWith(suffix) }?.toList()?.filterNotNull() ?: listOf()
+
 fun findJunitResults(directory: File): List<JunitTestSuite> = directory
-		.listFiles { _, name -> name.endsWith(".xml") }
+		.listFilesEndingWith(".xml")
 		.mapNotNull {
 			var suite: JunitTestSuite? = null
 			var case: JunitTestCase? = null
@@ -89,11 +92,14 @@ fun findJunitResults(directory: File): List<JunitTestSuite> = directory
 		}
 
 fun findCucumberResults(directory: File): List<CucumberFeature> = directory
-		.listFiles { _, name -> name.endsWith(".json") }.map { cucumberReportFile ->
+		.listFilesEndingWith(".json")
+		.map { cucumberReportFile ->
 			jsonObjectMapper.readValue<List<CucumberFeature>>(cucumberReportFile)
 		}.concat()
 
 
-fun findJmhResults(directory: File): List<JmhBenchmarkResult> = TODO()
+fun findJmhResults(directory: File): List<JmhBenchmarkResult> = directory.listFilesEndingWith(".json").map { jmhReportFile ->
+	jsonObjectMapper.readValue<List<JmhBenchmarkResult>>(jmhReportFile)
+}.concat()
 
 fun findGatlingResults(directory: File): List<JmhBenchmarkResult> = TODO()
