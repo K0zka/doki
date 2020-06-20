@@ -5,9 +5,9 @@ import java.util.UUID
 
 interface ProjectService {
 
-	fun getById(id : UUID) : Project
+	fun getById(id: UUID): Project
 
-	fun list() : List<Project>
+	fun list(): List<Project>
 
 	fun create(project: Project)
 

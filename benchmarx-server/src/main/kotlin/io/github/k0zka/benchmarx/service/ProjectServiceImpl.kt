@@ -11,15 +11,15 @@ import javax.inject.Inject
 class ProjectServiceImpl : ProjectService {
 
 	@Inject
-	lateinit var mongoClient : MongoClient
+	lateinit var mongoClient: MongoClient
 
 	override fun getById(id: UUID): Project =
-		mongoClient.project.getById(id.toString())
+			mongoClient.project.getById(id.toString())
 
 	override fun list(): List<Project> =
-		mongoClient.project.find().map {
-			read<Project>(it)
-		}.toList()
+			mongoClient.project.find().map {
+				read<Project>(it)
+			}.toList()
 
 	override fun create(project: Project) {
 		mongoClient.project

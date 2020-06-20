@@ -6,5 +6,6 @@ import javax.inject.Inject
 
 @ApplicationScoped
 class JmhServiceImpl : JmhService {
-	@Inject lateinit var client : MongoClient
+	@Inject
+	lateinit var client: MongoClient
 }

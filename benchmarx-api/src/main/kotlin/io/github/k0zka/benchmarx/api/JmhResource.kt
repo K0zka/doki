@@ -17,6 +17,7 @@ import javax.ws.rs.core.MediaType
 interface JmhResource : ProjectDataResource<JmhBenchmarkResult> {
 	@PUT
 	@Operation(summary = "Submit JMH reports")
-	override fun submitReports(@PathParam(value = "projectId") projectId: UUID, @QueryParam(value = "token") token: String,
+	override fun submitReports(@PathParam(value = "projectId") projectId: UUID,
+							   @QueryParam(value = "token") token: String,
 							   reports: List<JmhBenchmarkResult>): String
 }

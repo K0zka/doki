@@ -27,6 +27,6 @@ interface TokenResource {
 
 	@DELETE
 	@Operation(summary = "remove a token")
-	fun removeToken(@PathParam(value = "projectId") projectId: UUID, @QueryParam("token") token : String)
+	fun removeToken(@PathParam(value = "projectId") projectId: UUID, @QueryParam("token") token: String)
 
 }

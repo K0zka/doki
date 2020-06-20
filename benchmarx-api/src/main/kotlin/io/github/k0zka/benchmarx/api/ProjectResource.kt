@@ -19,7 +19,7 @@ interface ProjectResource {
 	@GET
 	@Path("/{id}")
 	@Operation(summary = "get a project by id")
-	fun get(@PathParam("id") id : UUID): Project
+	fun get(@PathParam("id") id: UUID): Project
 
 	@GET
 	@Operation(summary = "list projects")

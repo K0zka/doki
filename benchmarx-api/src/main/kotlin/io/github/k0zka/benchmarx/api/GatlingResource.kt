@@ -8,5 +8,5 @@ import javax.ws.rs.core.MediaType
 @Path("/projects/{projectId}/benchmarks/gatling")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-interface GatlingResource : ProjectDataResource<Unit>{
+interface GatlingResource : ProjectDataResource<Unit> {
 }

@@ -41,9 +41,9 @@ internal class ProcessKtTest {
 		val jmhResults = findJmhResults(File("src/test/resources/jmh/ProcessKtTest/findJmhResults"))
 		assertTrue(jmhResults.isNotEmpty())
 	}
-//
-//	@Test
-//	fun findGatlingResults() {
-//		TODO()
-//	}
+	//
+	//	@Test
+	//	fun findGatlingResults() {
+	//		TODO()
+	//	}
 }

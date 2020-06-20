@@ -98,8 +98,9 @@ fun findCucumberResults(directory: File): List<CucumberFeature> = directory
 		}.concat()
 
 
-fun findJmhResults(directory: File): List<JmhBenchmarkResult> = directory.listFilesEndingWith(".json").map { jmhReportFile ->
-	jsonObjectMapper.readValue<List<JmhBenchmarkResult>>(jmhReportFile)
-}.concat()
+fun findJmhResults(directory: File): List<JmhBenchmarkResult> =
+		directory.listFilesEndingWith(".json").map { jmhReportFile ->
+			jsonObjectMapper.readValue<List<JmhBenchmarkResult>>(jmhReportFile)
+		}.concat()
 
 fun findGatlingResults(directory: File): List<JmhBenchmarkResult> = TODO()

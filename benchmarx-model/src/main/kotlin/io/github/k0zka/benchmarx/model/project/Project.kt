@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import java.util.UUID
 import java.util.UUID.randomUUID
 
-data class Project (
+data class Project(
 		@get:JsonProperty("_id")
 		val id: UUID = randomUUID(),
 		@get:JsonProperty("name")

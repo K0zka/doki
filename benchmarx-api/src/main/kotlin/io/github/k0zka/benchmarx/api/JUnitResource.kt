@@ -14,7 +14,7 @@ import javax.ws.rs.core.MediaType.APPLICATION_JSON
 @Path("/projects/{projectId}/tests/junit")
 @Produces(APPLICATION_JSON)
 @Consumes(APPLICATION_JSON)
-interface JUnitResource : ProjectDataResource<JunitTestSuite>{
+interface JUnitResource : ProjectDataResource<JunitTestSuite> {
 	@PUT
 	@Operation(summary = "Submit JUnit reports")
 	override fun submitReports(

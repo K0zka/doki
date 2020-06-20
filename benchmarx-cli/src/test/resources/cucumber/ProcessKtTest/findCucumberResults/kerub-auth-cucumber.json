@@ -1,977 +1,977 @@
 [
   {
-    "line": 1,
-    "elements": [
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 2126240,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AuthenticationDefinitions.reset()"
-            }
-          }
-        ],
-        "line": 13,
-        "name": "Unauthenticated attempt to perform an action",
-        "description": "",
-        "id": "authentication-and-authorization-on-the-rest-api;unauthenticated-attempt-to-perform-an-action;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 2097033,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "anonymous user",
-            "match": {
-              "location": "AuthenticationDefinitions.setAnonUser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 457957344,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user tries to retrieve host list",
-            "match": {
-              "location": "AuthenticationDefinitions.tryRetrieveHostList()"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 530521,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "request must be rejected",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyRequestRejected()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 112961,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "the response code must be 401",
-            "match": {
-              "arguments": [
-                {
-                  "val": "401",
-                  "offset": 26
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyResponseCode(int)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 111528,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "the error code must be AUTH1",
-            "match": {
-              "arguments": [
-                {
-                  "val": "AUTH1",
-                  "offset": 23
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyErrorCode(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 119069,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "no session should be created",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyNoSession()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 1925910,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AuthenticationDefinitions.reset()"
-            }
-          }
-        ],
-        "line": 14,
-        "name": "Unauthenticated attempt to perform an action",
-        "description": "",
-        "id": "authentication-and-authorization-on-the-rest-api;unauthenticated-attempt-to-perform-an-action;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 17266,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "anonymous user",
-            "match": {
-              "location": "AuthenticationDefinitions.setAnonUser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 529660966,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user tries to retrieve vm list",
-            "match": {
-              "location": "AuthenticationDefinitions.tryRetrieveVmList()"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 26744,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "request must be rejected",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyRequestRejected()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 75802,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "the response code must be 401",
-            "match": {
-              "arguments": [
-                {
-                  "val": "401",
-                  "offset": 26
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyResponseCode(int)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 42502,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "the error code must be AUTH1",
-            "match": {
-              "arguments": [
-                {
-                  "val": "AUTH1",
-                  "offset": 23
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyErrorCode(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 23112,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "no session should be created",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyNoSession()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 2041331,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AuthenticationDefinitions.reset()"
-            }
-          }
-        ],
-        "line": 15,
-        "name": "Unauthenticated attempt to perform an action",
-        "description": "",
-        "id": "authentication-and-authorization-on-the-rest-api;unauthenticated-attempt-to-perform-an-action;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 20295,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "anonymous user",
-            "match": {
-              "location": "AuthenticationDefinitions.setAnonUser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 618359103,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user tries to join new host",
-            "match": {
-              "location": "AuthenticationDefinitions.tryJoinNewHost()"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 27765,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "request must be rejected",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyRequestRejected()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 78426,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "the response code must be 401",
-            "match": {
-              "arguments": [
-                {
-                  "val": "401",
-                  "offset": 26
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyResponseCode(int)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 40134,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "the error code must be AUTH1",
-            "match": {
-              "arguments": [
-                {
-                  "val": "AUTH1",
-                  "offset": 23
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyErrorCode(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 24392,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "no session should be created",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyNoSession()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 2062806,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AuthenticationDefinitions.reset()"
-            }
-          }
-        ],
-        "line": 16,
-        "name": "Unauthenticated attempt to perform an action",
-        "description": "",
-        "id": "authentication-and-authorization-on-the-rest-api;unauthenticated-attempt-to-perform-an-action;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 12626,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "anonymous user",
-            "match": {
-              "location": "AuthenticationDefinitions.setAnonUser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 643450452,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user tries to create new vm",
-            "match": {
-              "location": "AuthenticationDefinitions.tryCreateNewVm()"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 26175,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "request must be rejected",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyRequestRejected()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 69876,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "the response code must be 401",
-            "match": {
-              "arguments": [
-                {
-                  "val": "401",
-                  "offset": 26
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyResponseCode(int)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 30837,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "the error code must be AUTH1",
-            "match": {
-              "arguments": [
-                {
-                  "val": "AUTH1",
-                  "offset": 23
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyErrorCode(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 21858,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "no session should be created",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyNoSession()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 1826297,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AuthenticationDefinitions.reset()"
-            }
-          }
-        ],
-        "line": 17,
-        "name": "Unauthenticated attempt to perform an action",
-        "description": "",
-        "id": "authentication-and-authorization-on-the-rest-api;unauthenticated-attempt-to-perform-an-action;;6",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 15289,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "anonymous user",
-            "match": {
-              "location": "AuthenticationDefinitions.setAnonUser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 768158104,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user tries to get host public key",
-            "match": {
-              "location": "AuthenticationDefinitions.tryGetHostPublicKey()"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 20374,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "request must be rejected",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyRequestRejected()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 49145,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "the response code must be 401",
-            "match": {
-              "arguments": [
-                {
-                  "val": "401",
-                  "offset": 26
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyResponseCode(int)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 22161,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "the error code must be AUTH1",
-            "match": {
-              "arguments": [
-                {
-                  "val": "AUTH1",
-                  "offset": 23
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyErrorCode(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 14077,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "no session should be created",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyNoSession()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 1091817,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AuthenticationDefinitions.reset()"
-            }
-          }
-        ],
-        "line": 19,
-        "name": "Authentication errors on login attempt",
-        "description": "",
-        "id": "authentication-and-authorization-on-the-rest-api;authentication-errors-on-login-attempt",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 47155,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "user haxor with password seecret",
-            "match": {
-              "arguments": [
-                {
-                  "val": "haxor",
-                  "offset": 5
-                },
-                {
-                  "val": "seecret",
-                  "offset": 25
-                }
-              ],
-              "location": "AuthenticationDefinitions.setUserAndPassword(String,String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 410212360,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "user tries to log in",
-            "match": {
-              "location": "AuthenticationDefinitions.tryLogin()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 27883,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "request must be rejected",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyRequestRejected()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 70864,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "the response code must be 401",
-            "match": {
-              "arguments": [
-                {
-                  "val": "401",
-                  "offset": 26
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyResponseCode(int)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 41612,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "the error code must be AUTH2",
-            "match": {
-              "arguments": [
-                {
-                  "val": "AUTH2",
-                  "offset": 23
-                }
-              ],
-              "location": "AuthenticationDefinitions.verifyErrorCode(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 259446,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "no session should be created",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyNoSession()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 2110524,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AuthenticationDefinitions.reset()"
-            }
-          }
-        ],
-        "line": 35,
-        "name": "some services should be readable by anyone",
-        "description": "",
-        "id": "authentication-and-authorization-on-the-rest-api;some-services-should-be-readable-by-anyone;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 41330,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "anonymous user",
-            "match": {
-              "location": "AuthenticationDefinitions.setAnonUser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 10713417,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "user tries to get motd",
-            "match": {
-              "location": "AuthenticationDefinitions.tryGetMotd()"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 44400,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "request must pass",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyRequestPassed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 178165,
-              "status": "passed"
-            },
-            "line": 31,
-            "name": "no session should be created",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyNoSession()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 1807821,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AuthenticationDefinitions.reset()"
-            }
-          }
-        ],
-        "line": 36,
-        "name": "some services should be readable by anyone",
-        "description": "",
-        "id": "authentication-and-authorization-on-the-rest-api;some-services-should-be-readable-by-anyone;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 14125,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "anonymous user",
-            "match": {
-              "location": "AuthenticationDefinitions.setAnonUser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 24106323,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "user tries to get version",
-            "match": {
-              "location": "AuthenticationDefinitions.tryGetVersion()"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 23994,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "request must pass",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyRequestPassed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 43965,
-              "status": "passed"
-            },
-            "line": 31,
-            "name": "no session should be created",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyNoSession()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 2278503,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AuthenticationDefinitions.reset()"
-            }
-          }
-        ],
-        "line": 46,
-        "name": "Authentication pass with known users",
-        "description": "",
-        "id": "authentication-and-authorization-on-the-rest-api;authentication-pass-with-known-users;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 69928,
-              "status": "passed"
-            },
-            "line": 39,
-            "name": "user admin with password password",
-            "match": {
-              "arguments": [
-                {
-                  "val": "admin",
-                  "offset": 5
-                },
-                {
-                  "val": "password",
-                  "offset": 25
-                }
-              ],
-              "location": "AuthenticationDefinitions.setUserAndPassword(String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1
-            ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 92843842,
-              "status": "passed"
-            },
-            "line": 40,
-            "name": "user tries to log in",
-            "match": {
-              "location": "AuthenticationDefinitions.tryLogin()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 18530,
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "request must pass",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyRequestPassed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 341331,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "session should be created",
-            "match": {
-              "location": "AuthenticationDefinitions.verifySessionCreated()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 1429108,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AuthenticationDefinitions.reset()"
-            }
-          }
-        ],
-        "line": 47,
-        "name": "Authentication pass with known users",
-        "description": "",
-        "id": "authentication-and-authorization-on-the-rest-api;authentication-pass-with-known-users;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 36207,
-              "status": "passed"
-            },
-            "line": 39,
-            "name": "user enduser with password password",
-            "match": {
-              "arguments": [
-                {
-                  "val": "enduser",
-                  "offset": 5
-                },
-                {
-                  "val": "password",
-                  "offset": 27
-                }
-              ],
-              "location": "AuthenticationDefinitions.setUserAndPassword(String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1
-            ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 4851764,
-              "status": "passed"
-            },
-            "line": 40,
-            "name": "user tries to log in",
-            "match": {
-              "location": "AuthenticationDefinitions.tryLogin()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 17930,
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "request must pass",
-            "match": {
-              "location": "AuthenticationDefinitions.verifyRequestPassed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 199881,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "session should be created",
-            "match": {
-              "location": "AuthenticationDefinitions.verifySessionCreated()"
-            },
-            "keyword": "And "
-          }
-        ]
-      }
-    ],
-    "name": "Authentication and authorization on the rest api",
-    "description": "",
-    "id": "authentication-and-authorization-on-the-rest-api",
-    "keyword": "Feature",
-    "uri": "stories/rest/authentication.feature"
+	"line": 1,
+	"elements": [
+	  {
+		"before": [
+		  {
+			"result": {
+			  "duration": 2126240,
+			  "status": "passed"
+			},
+			"match": {
+			  "location": "AuthenticationDefinitions.reset()"
+			}
+		  }
+		],
+		"line": 13,
+		"name": "Unauthenticated attempt to perform an action",
+		"description": "",
+		"id": "authentication-and-authorization-on-the-rest-api;unauthenticated-attempt-to-perform-an-action;;2",
+		"type": "scenario",
+		"keyword": "Scenario Outline",
+		"steps": [
+		  {
+			"result": {
+			  "duration": 2097033,
+			  "status": "passed"
+			},
+			"line": 4,
+			"name": "anonymous user",
+			"match": {
+			  "location": "AuthenticationDefinitions.setAnonUser()"
+			},
+			"keyword": "Given "
+		  },
+		  {
+			"result": {
+			  "duration": 457957344,
+			  "status": "passed"
+			},
+			"line": 5,
+			"name": "user tries to retrieve host list",
+			"match": {
+			  "location": "AuthenticationDefinitions.tryRetrieveHostList()"
+			},
+			"matchedColumns": [
+			  0
+			],
+			"keyword": "When "
+		  },
+		  {
+			"result": {
+			  "duration": 530521,
+			  "status": "passed"
+			},
+			"line": 6,
+			"name": "request must be rejected",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyRequestRejected()"
+			},
+			"keyword": "Then "
+		  },
+		  {
+			"result": {
+			  "duration": 112961,
+			  "status": "passed"
+			},
+			"line": 7,
+			"name": "the response code must be 401",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "401",
+				  "offset": 26
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyResponseCode(int)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 111528,
+			  "status": "passed"
+			},
+			"line": 8,
+			"name": "the error code must be AUTH1",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "AUTH1",
+				  "offset": 23
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyErrorCode(String)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 119069,
+			  "status": "passed"
+			},
+			"line": 9,
+			"name": "no session should be created",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyNoSession()"
+			},
+			"keyword": "And "
+		  }
+		]
+	  },
+	  {
+		"before": [
+		  {
+			"result": {
+			  "duration": 1925910,
+			  "status": "passed"
+			},
+			"match": {
+			  "location": "AuthenticationDefinitions.reset()"
+			}
+		  }
+		],
+		"line": 14,
+		"name": "Unauthenticated attempt to perform an action",
+		"description": "",
+		"id": "authentication-and-authorization-on-the-rest-api;unauthenticated-attempt-to-perform-an-action;;3",
+		"type": "scenario",
+		"keyword": "Scenario Outline",
+		"steps": [
+		  {
+			"result": {
+			  "duration": 17266,
+			  "status": "passed"
+			},
+			"line": 4,
+			"name": "anonymous user",
+			"match": {
+			  "location": "AuthenticationDefinitions.setAnonUser()"
+			},
+			"keyword": "Given "
+		  },
+		  {
+			"result": {
+			  "duration": 529660966,
+			  "status": "passed"
+			},
+			"line": 5,
+			"name": "user tries to retrieve vm list",
+			"match": {
+			  "location": "AuthenticationDefinitions.tryRetrieveVmList()"
+			},
+			"matchedColumns": [
+			  0
+			],
+			"keyword": "When "
+		  },
+		  {
+			"result": {
+			  "duration": 26744,
+			  "status": "passed"
+			},
+			"line": 6,
+			"name": "request must be rejected",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyRequestRejected()"
+			},
+			"keyword": "Then "
+		  },
+		  {
+			"result": {
+			  "duration": 75802,
+			  "status": "passed"
+			},
+			"line": 7,
+			"name": "the response code must be 401",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "401",
+				  "offset": 26
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyResponseCode(int)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 42502,
+			  "status": "passed"
+			},
+			"line": 8,
+			"name": "the error code must be AUTH1",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "AUTH1",
+				  "offset": 23
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyErrorCode(String)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 23112,
+			  "status": "passed"
+			},
+			"line": 9,
+			"name": "no session should be created",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyNoSession()"
+			},
+			"keyword": "And "
+		  }
+		]
+	  },
+	  {
+		"before": [
+		  {
+			"result": {
+			  "duration": 2041331,
+			  "status": "passed"
+			},
+			"match": {
+			  "location": "AuthenticationDefinitions.reset()"
+			}
+		  }
+		],
+		"line": 15,
+		"name": "Unauthenticated attempt to perform an action",
+		"description": "",
+		"id": "authentication-and-authorization-on-the-rest-api;unauthenticated-attempt-to-perform-an-action;;4",
+		"type": "scenario",
+		"keyword": "Scenario Outline",
+		"steps": [
+		  {
+			"result": {
+			  "duration": 20295,
+			  "status": "passed"
+			},
+			"line": 4,
+			"name": "anonymous user",
+			"match": {
+			  "location": "AuthenticationDefinitions.setAnonUser()"
+			},
+			"keyword": "Given "
+		  },
+		  {
+			"result": {
+			  "duration": 618359103,
+			  "status": "passed"
+			},
+			"line": 5,
+			"name": "user tries to join new host",
+			"match": {
+			  "location": "AuthenticationDefinitions.tryJoinNewHost()"
+			},
+			"matchedColumns": [
+			  0
+			],
+			"keyword": "When "
+		  },
+		  {
+			"result": {
+			  "duration": 27765,
+			  "status": "passed"
+			},
+			"line": 6,
+			"name": "request must be rejected",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyRequestRejected()"
+			},
+			"keyword": "Then "
+		  },
+		  {
+			"result": {
+			  "duration": 78426,
+			  "status": "passed"
+			},
+			"line": 7,
+			"name": "the response code must be 401",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "401",
+				  "offset": 26
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyResponseCode(int)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 40134,
+			  "status": "passed"
+			},
+			"line": 8,
+			"name": "the error code must be AUTH1",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "AUTH1",
+				  "offset": 23
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyErrorCode(String)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 24392,
+			  "status": "passed"
+			},
+			"line": 9,
+			"name": "no session should be created",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyNoSession()"
+			},
+			"keyword": "And "
+		  }
+		]
+	  },
+	  {
+		"before": [
+		  {
+			"result": {
+			  "duration": 2062806,
+			  "status": "passed"
+			},
+			"match": {
+			  "location": "AuthenticationDefinitions.reset()"
+			}
+		  }
+		],
+		"line": 16,
+		"name": "Unauthenticated attempt to perform an action",
+		"description": "",
+		"id": "authentication-and-authorization-on-the-rest-api;unauthenticated-attempt-to-perform-an-action;;5",
+		"type": "scenario",
+		"keyword": "Scenario Outline",
+		"steps": [
+		  {
+			"result": {
+			  "duration": 12626,
+			  "status": "passed"
+			},
+			"line": 4,
+			"name": "anonymous user",
+			"match": {
+			  "location": "AuthenticationDefinitions.setAnonUser()"
+			},
+			"keyword": "Given "
+		  },
+		  {
+			"result": {
+			  "duration": 643450452,
+			  "status": "passed"
+			},
+			"line": 5,
+			"name": "user tries to create new vm",
+			"match": {
+			  "location": "AuthenticationDefinitions.tryCreateNewVm()"
+			},
+			"matchedColumns": [
+			  0
+			],
+			"keyword": "When "
+		  },
+		  {
+			"result": {
+			  "duration": 26175,
+			  "status": "passed"
+			},
+			"line": 6,
+			"name": "request must be rejected",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyRequestRejected()"
+			},
+			"keyword": "Then "
+		  },
+		  {
+			"result": {
+			  "duration": 69876,
+			  "status": "passed"
+			},
+			"line": 7,
+			"name": "the response code must be 401",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "401",
+				  "offset": 26
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyResponseCode(int)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 30837,
+			  "status": "passed"
+			},
+			"line": 8,
+			"name": "the error code must be AUTH1",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "AUTH1",
+				  "offset": 23
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyErrorCode(String)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 21858,
+			  "status": "passed"
+			},
+			"line": 9,
+			"name": "no session should be created",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyNoSession()"
+			},
+			"keyword": "And "
+		  }
+		]
+	  },
+	  {
+		"before": [
+		  {
+			"result": {
+			  "duration": 1826297,
+			  "status": "passed"
+			},
+			"match": {
+			  "location": "AuthenticationDefinitions.reset()"
+			}
+		  }
+		],
+		"line": 17,
+		"name": "Unauthenticated attempt to perform an action",
+		"description": "",
+		"id": "authentication-and-authorization-on-the-rest-api;unauthenticated-attempt-to-perform-an-action;;6",
+		"type": "scenario",
+		"keyword": "Scenario Outline",
+		"steps": [
+		  {
+			"result": {
+			  "duration": 15289,
+			  "status": "passed"
+			},
+			"line": 4,
+			"name": "anonymous user",
+			"match": {
+			  "location": "AuthenticationDefinitions.setAnonUser()"
+			},
+			"keyword": "Given "
+		  },
+		  {
+			"result": {
+			  "duration": 768158104,
+			  "status": "passed"
+			},
+			"line": 5,
+			"name": "user tries to get host public key",
+			"match": {
+			  "location": "AuthenticationDefinitions.tryGetHostPublicKey()"
+			},
+			"matchedColumns": [
+			  0
+			],
+			"keyword": "When "
+		  },
+		  {
+			"result": {
+			  "duration": 20374,
+			  "status": "passed"
+			},
+			"line": 6,
+			"name": "request must be rejected",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyRequestRejected()"
+			},
+			"keyword": "Then "
+		  },
+		  {
+			"result": {
+			  "duration": 49145,
+			  "status": "passed"
+			},
+			"line": 7,
+			"name": "the response code must be 401",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "401",
+				  "offset": 26
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyResponseCode(int)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 22161,
+			  "status": "passed"
+			},
+			"line": 8,
+			"name": "the error code must be AUTH1",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "AUTH1",
+				  "offset": 23
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyErrorCode(String)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 14077,
+			  "status": "passed"
+			},
+			"line": 9,
+			"name": "no session should be created",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyNoSession()"
+			},
+			"keyword": "And "
+		  }
+		]
+	  },
+	  {
+		"before": [
+		  {
+			"result": {
+			  "duration": 1091817,
+			  "status": "passed"
+			},
+			"match": {
+			  "location": "AuthenticationDefinitions.reset()"
+			}
+		  }
+		],
+		"line": 19,
+		"name": "Authentication errors on login attempt",
+		"description": "",
+		"id": "authentication-and-authorization-on-the-rest-api;authentication-errors-on-login-attempt",
+		"type": "scenario",
+		"keyword": "Scenario",
+		"steps": [
+		  {
+			"result": {
+			  "duration": 47155,
+			  "status": "passed"
+			},
+			"line": 20,
+			"name": "user haxor with password seecret",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "haxor",
+				  "offset": 5
+				},
+				{
+				  "val": "seecret",
+				  "offset": 25
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.setUserAndPassword(String,String)"
+			},
+			"keyword": "Given "
+		  },
+		  {
+			"result": {
+			  "duration": 410212360,
+			  "status": "passed"
+			},
+			"line": 21,
+			"name": "user tries to log in",
+			"match": {
+			  "location": "AuthenticationDefinitions.tryLogin()"
+			},
+			"keyword": "When "
+		  },
+		  {
+			"result": {
+			  "duration": 27883,
+			  "status": "passed"
+			},
+			"line": 22,
+			"name": "request must be rejected",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyRequestRejected()"
+			},
+			"keyword": "Then "
+		  },
+		  {
+			"result": {
+			  "duration": 70864,
+			  "status": "passed"
+			},
+			"line": 23,
+			"name": "the response code must be 401",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "401",
+				  "offset": 26
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyResponseCode(int)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 41612,
+			  "status": "passed"
+			},
+			"line": 24,
+			"name": "the error code must be AUTH2",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "AUTH2",
+				  "offset": 23
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.verifyErrorCode(String)"
+			},
+			"keyword": "And "
+		  },
+		  {
+			"result": {
+			  "duration": 259446,
+			  "status": "passed"
+			},
+			"line": 25,
+			"name": "no session should be created",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyNoSession()"
+			},
+			"keyword": "And "
+		  }
+		]
+	  },
+	  {
+		"before": [
+		  {
+			"result": {
+			  "duration": 2110524,
+			  "status": "passed"
+			},
+			"match": {
+			  "location": "AuthenticationDefinitions.reset()"
+			}
+		  }
+		],
+		"line": 35,
+		"name": "some services should be readable by anyone",
+		"description": "",
+		"id": "authentication-and-authorization-on-the-rest-api;some-services-should-be-readable-by-anyone;;2",
+		"type": "scenario",
+		"keyword": "Scenario Outline",
+		"steps": [
+		  {
+			"result": {
+			  "duration": 41330,
+			  "status": "passed"
+			},
+			"line": 28,
+			"name": "anonymous user",
+			"match": {
+			  "location": "AuthenticationDefinitions.setAnonUser()"
+			},
+			"keyword": "Given "
+		  },
+		  {
+			"result": {
+			  "duration": 10713417,
+			  "status": "passed"
+			},
+			"line": 29,
+			"name": "user tries to get motd",
+			"match": {
+			  "location": "AuthenticationDefinitions.tryGetMotd()"
+			},
+			"matchedColumns": [
+			  0
+			],
+			"keyword": "When "
+		  },
+		  {
+			"result": {
+			  "duration": 44400,
+			  "status": "passed"
+			},
+			"line": 30,
+			"name": "request must pass",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyRequestPassed()"
+			},
+			"keyword": "Then "
+		  },
+		  {
+			"result": {
+			  "duration": 178165,
+			  "status": "passed"
+			},
+			"line": 31,
+			"name": "no session should be created",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyNoSession()"
+			},
+			"keyword": "And "
+		  }
+		]
+	  },
+	  {
+		"before": [
+		  {
+			"result": {
+			  "duration": 1807821,
+			  "status": "passed"
+			},
+			"match": {
+			  "location": "AuthenticationDefinitions.reset()"
+			}
+		  }
+		],
+		"line": 36,
+		"name": "some services should be readable by anyone",
+		"description": "",
+		"id": "authentication-and-authorization-on-the-rest-api;some-services-should-be-readable-by-anyone;;3",
+		"type": "scenario",
+		"keyword": "Scenario Outline",
+		"steps": [
+		  {
+			"result": {
+			  "duration": 14125,
+			  "status": "passed"
+			},
+			"line": 28,
+			"name": "anonymous user",
+			"match": {
+			  "location": "AuthenticationDefinitions.setAnonUser()"
+			},
+			"keyword": "Given "
+		  },
+		  {
+			"result": {
+			  "duration": 24106323,
+			  "status": "passed"
+			},
+			"line": 29,
+			"name": "user tries to get version",
+			"match": {
+			  "location": "AuthenticationDefinitions.tryGetVersion()"
+			},
+			"matchedColumns": [
+			  0
+			],
+			"keyword": "When "
+		  },
+		  {
+			"result": {
+			  "duration": 23994,
+			  "status": "passed"
+			},
+			"line": 30,
+			"name": "request must pass",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyRequestPassed()"
+			},
+			"keyword": "Then "
+		  },
+		  {
+			"result": {
+			  "duration": 43965,
+			  "status": "passed"
+			},
+			"line": 31,
+			"name": "no session should be created",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyNoSession()"
+			},
+			"keyword": "And "
+		  }
+		]
+	  },
+	  {
+		"before": [
+		  {
+			"result": {
+			  "duration": 2278503,
+			  "status": "passed"
+			},
+			"match": {
+			  "location": "AuthenticationDefinitions.reset()"
+			}
+		  }
+		],
+		"line": 46,
+		"name": "Authentication pass with known users",
+		"description": "",
+		"id": "authentication-and-authorization-on-the-rest-api;authentication-pass-with-known-users;;2",
+		"type": "scenario",
+		"keyword": "Scenario Outline",
+		"steps": [
+		  {
+			"result": {
+			  "duration": 69928,
+			  "status": "passed"
+			},
+			"line": 39,
+			"name": "user admin with password password",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "admin",
+				  "offset": 5
+				},
+				{
+				  "val": "password",
+				  "offset": 25
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.setUserAndPassword(String,String)"
+			},
+			"matchedColumns": [
+			  0,
+			  1
+			],
+			"keyword": "Given "
+		  },
+		  {
+			"result": {
+			  "duration": 92843842,
+			  "status": "passed"
+			},
+			"line": 40,
+			"name": "user tries to log in",
+			"match": {
+			  "location": "AuthenticationDefinitions.tryLogin()"
+			},
+			"keyword": "When "
+		  },
+		  {
+			"result": {
+			  "duration": 18530,
+			  "status": "passed"
+			},
+			"line": 41,
+			"name": "request must pass",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyRequestPassed()"
+			},
+			"keyword": "Then "
+		  },
+		  {
+			"result": {
+			  "duration": 341331,
+			  "status": "passed"
+			},
+			"line": 42,
+			"name": "session should be created",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifySessionCreated()"
+			},
+			"keyword": "And "
+		  }
+		]
+	  },
+	  {
+		"before": [
+		  {
+			"result": {
+			  "duration": 1429108,
+			  "status": "passed"
+			},
+			"match": {
+			  "location": "AuthenticationDefinitions.reset()"
+			}
+		  }
+		],
+		"line": 47,
+		"name": "Authentication pass with known users",
+		"description": "",
+		"id": "authentication-and-authorization-on-the-rest-api;authentication-pass-with-known-users;;3",
+		"type": "scenario",
+		"keyword": "Scenario Outline",
+		"steps": [
+		  {
+			"result": {
+			  "duration": 36207,
+			  "status": "passed"
+			},
+			"line": 39,
+			"name": "user enduser with password password",
+			"match": {
+			  "arguments": [
+				{
+				  "val": "enduser",
+				  "offset": 5
+				},
+				{
+				  "val": "password",
+				  "offset": 27
+				}
+			  ],
+			  "location": "AuthenticationDefinitions.setUserAndPassword(String,String)"
+			},
+			"matchedColumns": [
+			  0,
+			  1
+			],
+			"keyword": "Given "
+		  },
+		  {
+			"result": {
+			  "duration": 4851764,
+			  "status": "passed"
+			},
+			"line": 40,
+			"name": "user tries to log in",
+			"match": {
+			  "location": "AuthenticationDefinitions.tryLogin()"
+			},
+			"keyword": "When "
+		  },
+		  {
+			"result": {
+			  "duration": 17930,
+			  "status": "passed"
+			},
+			"line": 41,
+			"name": "request must pass",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifyRequestPassed()"
+			},
+			"keyword": "Then "
+		  },
+		  {
+			"result": {
+			  "duration": 199881,
+			  "status": "passed"
+			},
+			"line": 42,
+			"name": "session should be created",
+			"match": {
+			  "location": "AuthenticationDefinitions.verifySessionCreated()"
+			},
+			"keyword": "And "
+		  }
+		]
+	  }
+	],
+	"name": "Authentication and authorization on the rest api",
+	"description": "",
+	"id": "authentication-and-authorization-on-the-rest-api",
+	"keyword": "Feature",
+	"uri": "stories/rest/authentication.feature"
   }
 ]

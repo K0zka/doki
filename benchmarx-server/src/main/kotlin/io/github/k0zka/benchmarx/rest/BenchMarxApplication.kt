@@ -8,7 +8,7 @@ import javax.ws.rs.core.Application
 
 @OpenAPIDefinition(
 		info = Info(
-				title="Benchmarx API",
+				title = "Benchmarx API",
 				version = "0.1",
 				contact = Contact(
 						name = "Developer",

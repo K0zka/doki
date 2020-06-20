@@ -9,6 +9,6 @@ data class CucumberScenario(
 		val keyword: String,
 		val before: List<CucumberAction>?,
 		val after: List<CucumberAction>?,
-		val steps : List<CucumberStep> = listOf(),
+		val steps: List<CucumberStep> = listOf(),
 		val comments: List<CucumberComment>?
 )

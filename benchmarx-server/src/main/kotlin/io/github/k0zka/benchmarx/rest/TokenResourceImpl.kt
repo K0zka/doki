@@ -3,7 +3,6 @@ package io.github.k0zka.benchmarx.rest
 import io.github.k0zka.benchmarx.api.TokenResource
 import io.github.k0zka.benchmarx.model.project.Token
 import io.github.k0zka.benchmarx.service.TokenService
-import org.eclipse.microprofile.openapi.annotations.Operation
 import java.util.UUID
 import javax.inject.Inject
 import javax.ws.rs.Consumes

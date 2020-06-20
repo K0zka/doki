@@ -30,10 +30,10 @@ inline fun <reified T> MongoCollection<Document>.getById(id: String) =
 inline fun <reified T> MongoCollection<Document>.listBy(property: String, value: String) =
 		this.find(BasicDBObject(property, value)).map { read<T>(it) }.toList()
 
-inline fun <reified T> MongoCollection<Document>.listBy(properties : Map<String, String>) =
+inline fun <reified T> MongoCollection<Document>.listBy(properties: Map<String, String>) =
 		this.find(BasicDBObject(properties)).map { read<T>(it) }.toList()
 
-inline fun MongoCollection<Document>.deleteBy(properties : Map<String, String>) =
+inline fun MongoCollection<Document>.deleteBy(properties: Map<String, String>) =
 		this.deleteOne(BasicDBObject(properties))
 
 fun <T> MongoCollection<Document>.insert(entity: T) =

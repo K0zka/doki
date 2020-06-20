@@ -16,5 +16,5 @@ interface UsageService {
 	@GET
 	@Path("total")
 	@Operation(summary = "Get the total storage space used by a project")
-	fun totalSpace(@PathParam("projectId") projectId : UUID)
+	fun totalSpace(@PathParam("projectId") projectId: UUID)
 }

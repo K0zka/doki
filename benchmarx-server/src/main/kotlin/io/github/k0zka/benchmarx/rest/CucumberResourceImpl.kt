@@ -19,7 +19,7 @@ import javax.ws.rs.core.MediaType
 class CucumberResourceImpl : CucumberResource {
 
 	@Inject
-	lateinit var cucumberService : CucumberService
+	lateinit var cucumberService: CucumberService
 
 	@PUT
 	override fun submitReports(

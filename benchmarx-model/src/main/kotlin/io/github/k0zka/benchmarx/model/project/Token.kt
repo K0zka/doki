@@ -5,8 +5,8 @@ import java.util.UUID
 
 data class Token(
 		@JsonProperty("_id")
-		val id : UUID,
-		val projectId : UUID,
-		val token : String,
-		val generated : Long
+		val id: UUID,
+		val projectId: UUID,
+		val token: String,
+		val generated: Long
 )

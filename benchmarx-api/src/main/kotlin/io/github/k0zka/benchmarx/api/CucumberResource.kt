@@ -13,7 +13,7 @@ import javax.ws.rs.core.MediaType
 @Path("/projects/{projectId}/tests/cucumber")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-interface CucumberResource : ProjectDataResource<CucumberReport>{
+interface CucumberResource : ProjectDataResource<CucumberReport> {
 
 	@PUT
 	override fun submitReports(
