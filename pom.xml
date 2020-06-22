@@ -15,6 +15,7 @@
 		<module>benchmarx-server</module>
 		<module>benchmarx-gatling</module>
 		<module>benchmarx-client</module>
+		<module>benchmarx-integration-tests</module>
 	</modules>
 
 	<properties>
@@ -31,6 +32,7 @@
 		<quarkus.platform.version>1.2.0.Final</quarkus.platform.version>
 		<surefire-plugin.version>2.22.1</surefire-plugin.version>
 		<junit.jupiter.version>5.4.2</junit.jupiter.version>
+		<kroki.version>1.14</kroki.version>
 	</properties>
 
 	<build>

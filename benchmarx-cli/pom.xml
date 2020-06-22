@@ -30,7 +30,7 @@
 		<dependency>
 			<groupId>io.github.kerubistan.kroki</groupId>
 			<artifactId>kroki-utils</artifactId>
-			<version>1.11-SNAPSHOT</version>
+			<version>${kroki.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
