@@ -6,7 +6,7 @@ import org.junit.Test
 
 class ClientKtTest {
 	@Test
-	fun projectResource() {
-		assertNotNull( projectResource<JUnitResource>("http://localhost:8080/") )
+	fun restResource() {
+		assertNotNull( restResource<JUnitResource>("http://localhost:8080/") )
 	}
 }
