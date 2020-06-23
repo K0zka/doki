@@ -8,7 +8,7 @@ import com.github.ajalt.mordant.TermColors
 
 object BenchmarxCli : CliktCommand(name = "benchmarx") {
 
-	private val serverUrl by option(help = "server url", envvar = "serverUrl").default("http://localhost/")
+	private val serverUrl by option(help = "server url", envvar = "server-url").default("http://localhost/")
 	private val token by option(help = "token", envvar = "token").required()
 
 	override fun run() {
