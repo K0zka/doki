@@ -5,7 +5,7 @@ import org.junit.Test
 
 class BenchmarxCliTest {
 	@Test
-	fun run() {
-
+	fun main() {
+		BenchmarxCli.main(argv = arrayOf("--server-url", "http://localhost:8080", "--token", "TEST-TOKEN"))
 	}
 }
