@@ -15,7 +15,6 @@
 		<module>benchmarx-server</module>
 		<module>benchmarx-gatling</module>
 		<module>benchmarx-client</module>
-		<module>benchmarx-integration-tests</module>
 	</modules>
 
 	<properties>
