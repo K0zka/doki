@@ -3,28 +3,28 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<artifactId>benchmarx</artifactId>
-		<groupId>io.github.k0zka</groupId>
+		<artifactId>doki-root</artifactId>
+		<groupId>dev.doki</groupId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>benchmarx-cli</artifactId>
+	<artifactId>doki-cli</artifactId>
 
 	<dependencies>
 		<dependency>
-			<groupId>io.github.k0zka</groupId>
-			<artifactId>benchmarx-model</artifactId>
+			<groupId>dev.doki</groupId>
+			<artifactId>doki-model</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>io.github.k0zka</groupId>
-			<artifactId>benchmarx-client</artifactId>
+			<groupId>dev.doki</groupId>
+			<artifactId>doki-client</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>io.github.k0zka</groupId>
-			<artifactId>benchmarx-api</artifactId>
+			<groupId>dev.doki</groupId>
+			<artifactId>doki-api</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>

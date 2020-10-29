@@ -2,19 +2,21 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
          xmlns="http://maven.apache.org/POM/4.0.0">
+
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>io.github.k0zka</groupId>
-	<artifactId>benchmarx</artifactId>
+
+	<groupId>dev.doki</groupId>
+	<artifactId>doki-root</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0.0-SNAPSHOT</version>
 	<modules>
-		<module>benchmarx-model</module>
-		<module>benchmarx-api</module>
-		<module>benchmarx-maven-plugin</module>
-		<module>benchmarx-cli</module>
-		<module>benchmarx-server</module>
-		<module>benchmarx-gatling</module>
-		<module>benchmarx-client</module>
+		<module>doki-model</module>
+		<module>doki-api</module>
+		<module>doki-maven-plugin</module>
+		<module>doki-cli</module>
+		<module>doki-server</module>
+		<module>doki-gatling</module>
+		<module>doki-client</module>
 	</modules>
 
 	<properties>

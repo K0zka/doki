@@ -2,13 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<parent>
-		<groupId>io.github.k0zka</groupId>
-		<artifactId>benchmarx</artifactId>
+		<artifactId>doki-root</artifactId>
+		<groupId>dev.doki</groupId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>benchmarx-gatling</artifactId>
+	<artifactId>doki-gatling</artifactId>
 	<inceptionYear>2020</inceptionYear>
 
 	<properties>
@@ -60,7 +60,7 @@
 		</dependency>
 		<dependency>
 			<groupId>${parent.groupId}</groupId>
-			<artifactId>benchmarx-server</artifactId>
+			<artifactId>doki-server</artifactId>
 			<version>${parent.version}</version>
 			<scope>test</scope>
 		</dependency>
