@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd"
-           name="io.github.k0zka.benchmarx.cli.ProcessKtTest" time="0.085" tests="4" errors="4" skipped="0"
+           name="dev.doki.cli.ProcessKtTest" time="0.085" tests="4" errors="4" skipped="0"
            failures="0">
 	<properties>
 		<property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -68,28 +68,28 @@
 		<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
 		<property name="java.class.version" value="52.0"/>
 	</properties>
-	<testcase name="findJunitResults" classname="io.github.k0zka.benchmarx.cli.ProcessKtTest" time="0.04">
+	<testcase name="findJunitResults" classname="dev.doki.cli.ProcessKtTest" time="0.04">
 		<error message="An operation is not implemented." type="kotlin.NotImplementedError">kotlin.NotImplementedError:
 			An operation is not implemented.
-			at io.github.k0zka.benchmarx.cli.ProcessKtTest.findJunitResults(ProcessKtTest.kt:9)
+			at dev.doki.cli.ProcessKtTest.findJunitResults(ProcessKtTest.kt:9)
 		</error>
 	</testcase>
-	<testcase name="findJmhResults" classname="io.github.k0zka.benchmarx.cli.ProcessKtTest" time="0.004">
+	<testcase name="findJmhResults" classname="dev.doki.cli.ProcessKtTest" time="0.004">
 		<error message="An operation is not implemented." type="kotlin.NotImplementedError">kotlin.NotImplementedError:
 			An operation is not implemented.
-			at io.github.k0zka.benchmarx.cli.ProcessKtTest.findJmhResults(ProcessKtTest.kt:19)
+			at dev.doki.cli.ProcessKtTest.findJmhResults(ProcessKtTest.kt:19)
 		</error>
 	</testcase>
-	<testcase name="findGatlingResults" classname="io.github.k0zka.benchmarx.cli.ProcessKtTest" time="0.006">
+	<testcase name="findGatlingResults" classname="dev.doki.cli.ProcessKtTest" time="0.006">
 		<error message="An operation is not implemented." type="kotlin.NotImplementedError">kotlin.NotImplementedError:
 			An operation is not implemented.
-			at io.github.k0zka.benchmarx.cli.ProcessKtTest.findGatlingResults(ProcessKtTest.kt:24)
+			at dev.doki.cli.ProcessKtTest.findGatlingResults(ProcessKtTest.kt:24)
 		</error>
 	</testcase>
-	<testcase name="findCucumberResults" classname="io.github.k0zka.benchmarx.cli.ProcessKtTest" time="0.004">
+	<testcase name="findCucumberResults" classname="dev.doki.cli.ProcessKtTest" time="0.004">
 		<error message="An operation is not implemented." type="kotlin.NotImplementedError">kotlin.NotImplementedError:
 			An operation is not implemented.
-			at io.github.k0zka.benchmarx.cli.ProcessKtTest.findCucumberResults(ProcessKtTest.kt:14)
+			at dev.doki.cli.ProcessKtTest.findCucumberResults(ProcessKtTest.kt:14)
 		</error>
 	</testcase>
 </testsuite>
