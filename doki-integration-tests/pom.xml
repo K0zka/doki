@@ -29,7 +29,7 @@
 
 		<dependency>
 			<groupId>${parent.groupId}</groupId>
-			<artifactId>doki-cli</artifactId>
+			<artifactId>doki-client</artifactId>
 			<version>${parent.version}</version>
 			<scope>test</scope>
 		</dependency>

@@ -11,7 +11,7 @@ import dev.doki.model.junit.JunitTestCase
 import dev.doki.model.junit.JunitTestSuite
 import dev.doki.model.junit.Outcome
 import io.github.kerubistan.kroki.collections.concat
-import io.github.kerubistan.kroki.collections.toList
+import io.github.kerubistan.kroki.iteration.toList
 import java.io.File
 import javax.xml.stream.events.Attribute
 import javax.xml.stream.events.Characters
@@ -96,7 +96,6 @@ fun findCucumberResults(directory: File): List<CucumberFeature> = directory
 		.map { cucumberReportFile ->
 			jsonObjectMapper.readValue<List<CucumberFeature>>(cucumberReportFile)
 		}.concat()
-
 
 fun findJmhResults(directory: File): List<JmhBenchmarkResult> =
 		directory.listFilesEndingWith(".json").map { jmhReportFile ->

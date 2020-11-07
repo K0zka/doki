@@ -7,7 +7,7 @@ import org.apache.maven.plugins.annotations.Parameter
 import java.io.File
 
 @Mojo(name = "upload", defaultPhase = LifecyclePhase.DEPLOY, requiresProject = false, requiresOnline = true)
-class BenchmarxUploadMojo : AbstractMojo() {
+class DokiUploadMojo : AbstractMojo() {
 
 	@Parameter
 	internal var jmhResults: File? = null

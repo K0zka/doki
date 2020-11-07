@@ -14,9 +14,10 @@
 		<module>doki-api</module>
 		<module>doki-maven-plugin</module>
 		<module>doki-cli</module>
+		<module>doki-client</module>
 		<module>doki-server</module>
 		<module>doki-gatling</module>
-		<module>doki-client</module>
+		<module>doki-integration-tests</module>
 	</modules>
 
 	<properties>
@@ -33,7 +34,7 @@
 		<quarkus.platform.version>1.2.0.Final</quarkus.platform.version>
 		<surefire-plugin.version>2.22.1</surefire-plugin.version>
 		<junit.jupiter.version>5.4.2</junit.jupiter.version>
-		<kroki.version>1.14</kroki.version>
+		<kroki.version>1.21</kroki.version>
 	</properties>
 
 	<build>
