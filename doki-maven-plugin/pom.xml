@@ -13,8 +13,7 @@
 		<maven.api.version>3.6.0</maven.api.version>
 	</properties>
 	<artifactId>doki-maven-plugin</artifactId>
-	<name>benchmarx-maven-plugin</name>
-	<description>uploads various benchmark results to benchmarx</description>
+	<description>uploads various test and benchmark results to doki</description>
 	<packaging>maven-plugin</packaging>
 	<inceptionYear>2020</inceptionYear>
 	<url>https://github.com/K0zka/benchmarx</url>
@@ -66,7 +65,6 @@
 
 	<build>
 		<sourceDirectory>src/main/kotlin</sourceDirectory>
-		<testSourceDirectory>src/test/kotlin</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

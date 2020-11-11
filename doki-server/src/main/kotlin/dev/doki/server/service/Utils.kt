@@ -9,10 +9,10 @@ import dev.doki.server.quarkus.RegisterCustomModuleCustomizer
 import org.bson.Document
 
 val objectMapper = ObjectMapper().apply {
-	RegisterCustomModuleCustomizer().customize(this)
+	RegisterCustomModuleCustomizer.customize(this)
 }
 
-val MongoClient.database: MongoDatabase get() = this.getDatabase("benchmarx")
+val MongoClient.database: MongoDatabase get() = this.getDatabase("doki")
 
 val MongoClient.project: MongoCollection<Document> get() = this.database.getCollection("projects")
 

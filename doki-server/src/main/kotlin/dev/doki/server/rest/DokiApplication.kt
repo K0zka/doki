@@ -8,7 +8,7 @@ import javax.ws.rs.core.Application
 
 @OpenAPIDefinition(
 		info = Info(
-				title = "Benchmarx API",
+				title = "Doki API",
 				version = "0.1",
 				contact = Contact(
 						name = "Developer",
@@ -17,4 +17,4 @@ import javax.ws.rs.core.Application
 						name = "Apache 2.0",
 						url = "http://www.apache.org/licenses/LICENSE-2.0.html"))
 )
-class BenchMarxApplication : Application()
+class DokiApplication : Application()

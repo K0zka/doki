@@ -7,8 +7,9 @@ import org.eclipse.microprofile.openapi.annotations.Operation
 import java.util.UUID
 import javax.inject.Inject
 import javax.ws.rs.Consumes
+import javax.ws.rs.DELETE
 import javax.ws.rs.GET
-import javax.ws.rs.PUT
+import javax.ws.rs.POST
 import javax.ws.rs.Path
 import javax.ws.rs.PathParam
 import javax.ws.rs.Produces
@@ -31,8 +32,15 @@ class ProjectsResourceImpl : ProjectResource {
 	@Operation(summary = "list projects")
 	override fun list(): List<Project> = service.list()
 
-	@PUT
+	@POST
 	@Operation(summary = "register a new project")
 	override fun create(project: Project) = service.create(project)
+
+	@DELETE
+	@Path("/{id}")
+	@Operation(summary = "delete the project")
+	override fun delete(@PathParam("id") id: UUID) {
+		service.delete(id)
+	}
 
 }

@@ -11,4 +11,6 @@ interface ProjectService {
 
 	fun create(project: Project)
 
+	fun delete(projectId: UUID)
+
 }

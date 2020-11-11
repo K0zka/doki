@@ -1,18 +1,19 @@
 package dev.doki.model.project
 
+import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.annotation.JsonProperty
 import java.util.UUID
 import java.util.UUID.randomUUID
 
-data class Project(
-		@get:JsonProperty("_id")
+data class Project @JsonCreator constructor(
+		@JsonProperty("_id")
 		val id: UUID = randomUUID(),
-		@get:JsonProperty("name")
+		@JsonProperty("name")
 		val name: String,
-		@get:JsonProperty("url")
+		@JsonProperty("url")
 		val url: String,
-		@get:JsonProperty("registered-at")
+		@JsonProperty("registered-at")
 		val registered: Long,
-		@get:JsonProperty("logo-url")
+		@JsonProperty("logo-url")
 		val logoUrl: String
 )

@@ -26,4 +26,10 @@ class ProjectServiceImpl : ProjectService {
 				.insertOne(Document.parse(objectMapper.writeValueAsString(project)))
 	}
 
+	override fun delete(projectId: UUID) {
+		mongoClient.project.deleteOne(
+				Document( "_id", projectId )
+		)
+	}
+
 }
