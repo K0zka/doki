@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.MapperFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import com.fasterxml.jackson.module.kotlin.readValue
+import dev.doki.api.ProjectDataResource
+import dev.doki.cli.client.restResource
 import dev.doki.model.cucumber.CucumberFeature
 import dev.doki.model.jmh.JmhBenchmarkResult
 import dev.doki.model.junit.JunitTestCase
@@ -13,6 +15,7 @@ import dev.doki.model.junit.Outcome
 import io.github.kerubistan.kroki.collections.concat
 import io.github.kerubistan.kroki.iteration.toList
 import java.io.File
+import java.util.UUID
 import javax.xml.stream.events.Attribute
 import javax.xml.stream.events.Characters
 import javax.xml.stream.events.EndElement
@@ -103,3 +106,13 @@ fun findJmhResults(directory: File): List<JmhBenchmarkResult> =
 		}.concat()
 
 fun findGatlingResults(directory: File): List<JmhBenchmarkResult> = TODO()
+
+inline fun <reified R, reified T : ProjectDataResource<R>> File.submitReports(dokiServerUrl : String, projectUUID: UUID, projectToken : String, collect : (File) -> List<R>) {
+	val results = collect(this)
+	val resource : T = restResource(dokiServerUrl)
+	resource.submitReports(
+			projectId = projectUUID,
+			token = projectToken,
+			reports = results
+	)
+}
