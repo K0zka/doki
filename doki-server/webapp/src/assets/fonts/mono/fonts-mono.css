@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "mono";
+  src: url("JetBrainsMono-Regular.woff");
+}
+
+
+@font-face {
+  font-family: "mono-bold";
+  src: url("JetBrainsMono-Bold.woff");
+}
+
+@font-face {
+  font-family: "mono-bold-italic";
+  src: url("JetBrainsMono-Bold-Italic.woff");
+}
+

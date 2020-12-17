@@ -1,18 +1,8 @@
 
-<ul ngbNav #nav="ngbNav" class="nav-tabs">
-  <li ngbNavItem>
-    <a ngbNavLink>First</a>
-    <ng-template ngbNavContent>
-
-    </ng-template>
-  </li>
-  <li ngbNavItem>
-    <a ngbNavLink>Second</a>
-    <ng-template ngbNavContent>
-
-    </ng-template>
-  </li>
-</ul>
-<div [ngbNavOutlet]="nav"></div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Doki</li>
+  </ol>
+</nav>
 
 <router-outlet></router-outlet>
