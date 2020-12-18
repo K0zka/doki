@@ -26,6 +26,7 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/fonts/mono/fonts-mono.css",
+              "src/assets/fonts/opensans/fonts-opensans.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -91,7 +92,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/fonts/mono/fonts-mono.css"
+              "src/assets/fonts/mono/fonts-mono.css",
+              "src/assets/fonts/opensans/fonts-opensans.css"
             ],
             "scripts": []
           }
