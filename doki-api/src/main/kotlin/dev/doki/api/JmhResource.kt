@@ -9,15 +9,16 @@ import javax.ws.rs.Path
 import javax.ws.rs.PathParam
 import javax.ws.rs.Produces
 import javax.ws.rs.QueryParam
-import javax.ws.rs.core.MediaType
 
-@Path("/projects/{projectId}/benchmarks/jmh")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Path("$V1_API_PREFIX/projects/{projectId}/benchmarks/jmh")
+@Produces(JSON)
+@Consumes(JSON)
 interface JmhResource : ProjectDataResource<JmhBenchmarkResult> {
 	@PUT
 	@Operation(summary = "Submit JMH reports")
-	override fun submitReports(@PathParam(value = "projectId") projectId: UUID,
-							   @QueryParam(value = "token") token: String,
-							   reports: List<JmhBenchmarkResult>): String
+	override fun submitReports(
+		@PathParam(value = "projectId") projectId: UUID,
+		@QueryParam(value = "token") token: String,
+		reports: List<JmhBenchmarkResult>
+	): String
 }

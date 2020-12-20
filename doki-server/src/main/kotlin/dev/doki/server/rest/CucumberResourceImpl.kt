@@ -1,6 +1,8 @@
 package dev.doki.server.rest
 
 import dev.doki.api.CucumberResource
+import dev.doki.api.JSON
+import dev.doki.api.V1_API_PREFIX
 import dev.doki.model.cucumber.CucumberReport
 import dev.doki.server.service.CucumberService
 import java.util.UUID
@@ -13,9 +15,9 @@ import javax.ws.rs.Produces
 import javax.ws.rs.QueryParam
 import javax.ws.rs.core.MediaType
 
-@Path("/projects/{projectId}/tests/cucumber")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Path("$V1_API_PREFIX/projects/{projectId}/tests/cucumber")
+@Produces(JSON)
+@Consumes(JSON)
 class CucumberResourceImpl : CucumberResource {
 
 	@Inject

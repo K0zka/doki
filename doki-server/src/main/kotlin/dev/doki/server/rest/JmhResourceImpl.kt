@@ -1,6 +1,8 @@
 package dev.doki.server.rest
 
+import dev.doki.api.JSON
 import dev.doki.api.JmhResource
+import dev.doki.api.V1_API_PREFIX
 import dev.doki.model.jmh.JmhBenchmarkResult
 import dev.doki.server.service.JmhService
 import dev.doki.server.service.TokenService
@@ -12,11 +14,10 @@ import javax.ws.rs.Path
 import javax.ws.rs.PathParam
 import javax.ws.rs.Produces
 import javax.ws.rs.QueryParam
-import javax.ws.rs.core.MediaType
 
-@Path("/projects/{projectId}/benchmarks/jmh")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Path("$V1_API_PREFIX/projects/{projectId}/benchmarks/jmh")
+@Produces(JSON)
+@Consumes(JSON)
 class JmhResourceImpl : JmhResource {
 
 	@Inject

@@ -1,6 +1,8 @@
 package dev.doki.server.rest
 
+import dev.doki.api.JSON
 import dev.doki.api.TokenResource
+import dev.doki.api.V1_API_PREFIX
 import dev.doki.model.project.Token
 import dev.doki.server.service.TokenService
 import java.util.UUID
@@ -15,9 +17,9 @@ import javax.ws.rs.Produces
 import javax.ws.rs.QueryParam
 import javax.ws.rs.core.MediaType
 
-@Path("/projects/{projectId}/tokens")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Path("$V1_API_PREFIX/projects/{projectId}/tokens")
+@Produces(JSON)
+@Consumes(JSON)
 class TokenResourceImpl : TokenResource {
 	@Inject
 	lateinit var tokenService: TokenService

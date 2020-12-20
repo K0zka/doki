@@ -1,6 +1,8 @@
 package dev.doki.server.rest
 
+import dev.doki.api.JSON
 import dev.doki.api.ProjectResource
+import dev.doki.api.V1_API_PREFIX
 import dev.doki.model.project.Project
 import dev.doki.server.service.ProjectService
 import org.eclipse.microprofile.openapi.annotations.Operation
@@ -15,10 +17,10 @@ import javax.ws.rs.PathParam
 import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 
-@Path("/projects")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
-class ProjectsResourceImpl : ProjectResource {
+@Path("$V1_API_PREFIX/projects")
+@Produces(JSON)
+@Consumes(JSON)
+class ProjectsResouryceImpl : ProjectResource {
 
 	@Inject
 	lateinit var service: ProjectService

@@ -13,9 +13,9 @@ import javax.ws.rs.Produces
 import javax.ws.rs.QueryParam
 import javax.ws.rs.core.MediaType
 
-@Path("/projects/{projectId}/tokens")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Path("$V1_API_PREFIX/projects/{projectId}/tokens")
+@Produces(JSON)
+@Consumes(JSON)
 interface TokenResource {
 	@GET
 	@Operation(summary = "list tokens of a project")

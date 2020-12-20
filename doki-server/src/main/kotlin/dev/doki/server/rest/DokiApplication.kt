@@ -17,4 +17,6 @@ import javax.ws.rs.core.Application
 						name = "Apache 2.0",
 						url = "http://www.apache.org/licenses/LICENSE-2.0.html"))
 )
-class DokiApplication : Application()
+class DokiApplication : Application() {
+
+}

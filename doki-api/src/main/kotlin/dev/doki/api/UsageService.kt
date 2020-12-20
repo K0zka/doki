@@ -9,9 +9,9 @@ import javax.ws.rs.PathParam
 import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 
-@Path("/projects/{projectId}/statistics")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Path("$V1_API_PREFIX/projects/{projectId}/statistics")
+@Produces(JSON)
+@Consumes(JSON)
 interface UsageService {
 	@GET
 	@Path("total")

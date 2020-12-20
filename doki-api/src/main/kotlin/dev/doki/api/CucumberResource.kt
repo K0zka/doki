@@ -10,14 +10,13 @@ import javax.ws.rs.Path
 import javax.ws.rs.PathParam
 import javax.ws.rs.Produces
 import javax.ws.rs.QueryParam
-import javax.ws.rs.core.MediaType
 
 @OpenAPIDefinition(
 		info = Info(title = "Cucumber resource", description = "Allows uploading cucumber test execution reports", version = "1.0")
 )
-@Path("/projects/{projectId}/tests/cucumber")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Path("$V1_API_PREFIX/projects/{projectId}/tests/cucumber")
+@Produces(JSON)
+@Consumes(JSON)
 interface CucumberResource : ProjectDataResource<CucumberReport> {
 
 	@PUT

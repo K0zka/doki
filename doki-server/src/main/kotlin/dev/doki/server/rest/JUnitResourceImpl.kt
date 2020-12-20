@@ -1,6 +1,8 @@
 package dev.doki.server.rest
 
+import dev.doki.api.JSON
 import dev.doki.api.JUnitResource
+import dev.doki.api.V1_API_PREFIX
 import dev.doki.model.junit.JunitTestSuite
 import org.eclipse.microprofile.openapi.annotations.Operation
 import java.util.UUID
@@ -12,9 +14,9 @@ import javax.ws.rs.Produces
 import javax.ws.rs.QueryParam
 import javax.ws.rs.core.MediaType.APPLICATION_JSON
 
-@Path("/projects/{projectId}/tests/junit")
-@Produces(APPLICATION_JSON)
-@Consumes(APPLICATION_JSON)
+@Path("$V1_API_PREFIX/projects/{projectId}/tests/junit")
+@Produces(JSON)
+@Consumes(JSON)
 class JUnitResourceImpl : JUnitResource {
 	@PUT
 	@Operation(summary = "Submit JUnit reports")
