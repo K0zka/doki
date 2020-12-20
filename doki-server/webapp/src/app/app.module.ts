@@ -11,6 +11,8 @@ import { JunitReportComponent } from './junit-report/junit-report.component';
 import { CucumberReportComponent } from './cucumber-report/cucumber-report.component';
 import { JmhReportComponent } from './jmh-report/jmh-report.component';
 import { GatlingReportComponent } from './gatling-report/gatling-report.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NewProjectComponent } from './new-project/new-project.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { GatlingReportComponent } from './gatling-report/gatling-report.componen
     JunitReportComponent,
     CucumberReportComponent,
     JmhReportComponent,
-    GatlingReportComponent
+    GatlingReportComponent,
+    NewProjectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     FontAwesomeModule
   ],
   providers: [],

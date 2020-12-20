@@ -14,4 +14,5 @@ export class AppComponent {
   faStopWatch = faStopwatch;
   faCheckSquare = faCheckSquare;
   faCheck = faCheck;
+
 }

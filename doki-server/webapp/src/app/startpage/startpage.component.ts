@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DokiStatisticsApiService } from '../doki-statistics-api.service'
 
 @Component({
   selector: 'app-startpage',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartpageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private statService : DokiStatisticsApiService) {
+
+  }
+
+  totalProjects;
 
   ngOnInit(): void {
+    this.statService.getStats().subscribe( (data)=>{
+      this.totalProjects =  data['totalProjects'];
+    }
+    );
   }
 
 }
