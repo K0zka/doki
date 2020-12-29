@@ -15,6 +15,7 @@ import { JmhReportComponent } from './jmh-report/jmh-report.component';
 import { GatlingReportComponent } from './gatling-report/gatling-report.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewProjectComponent } from './new-project/new-project.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NewProjectComponent } from './new-project/new-project.component';
     CucumberReportComponent,
     JmhReportComponent,
     GatlingReportComponent,
-    NewProjectComponent
+    NewProjectComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

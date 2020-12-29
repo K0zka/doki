@@ -10,4 +10,9 @@ interface TokenService {
 	fun checkToken(projectId: UUID, token: String)
 	fun removeToken(projectId: UUID, token: String)
 
+	fun <T> doPrivileged(projectId : UUID, token : String, action :() -> T ) : T {
+		checkToken(projectId, token)
+		return action()
+	}
+
 }

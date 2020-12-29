@@ -4,6 +4,7 @@ import com.mongodb.client.MongoClient
 import dev.doki.model.project.Token
 import io.github.kerubistan.kroki.random.genPassword
 import io.github.kerubistan.kroki.time.now
+import java.lang.IllegalArgumentException
 import java.util.UUID
 import java.util.UUID.randomUUID
 import javax.enterprise.context.ApplicationScoped
@@ -14,6 +15,9 @@ class TokenServiceImpl : TokenService {
 
 	@Inject
 	lateinit var mongoClient: MongoClient
+
+	@Inject
+	lateinit var projectService: ProjectService
 
 	override fun listByProject(projectId: UUID): List<Token> =
 			mongoClient.token.listBy(Token::projectId.name, projectId.toString())
@@ -26,12 +30,18 @@ class TokenServiceImpl : TokenService {
 	).apply { mongoClient.token.insert(this) }
 
 	override fun checkToken(projectId: UUID, token: String) {
-		check(mongoClient.token.listBy<Token>(
+		if(projectService.getById(projectId) == null) {
+			throw IllegalArgumentException("Project id $projectId not found")
+		}
+
+		if(mongoClient.token.listBy<Token>(
 				mapOf(
 						Token::projectId.name to projectId.toString(),
 						Token::token.name to token
 				)
-		).isNotEmpty())
+		).isEmpty()) {
+			throw SecurityException("Token not valid")
+		}
 	}
 
 	override fun removeToken(projectId: UUID, token: String) {

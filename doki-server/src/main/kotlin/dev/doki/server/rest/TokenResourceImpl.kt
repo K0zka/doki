@@ -6,6 +6,7 @@ import dev.doki.api.V1_API_PREFIX
 import dev.doki.model.project.Token
 import dev.doki.server.service.TokenService
 import java.util.UUID
+import javax.annotation.security.RolesAllowed
 import javax.inject.Inject
 import javax.ws.rs.Consumes
 import javax.ws.rs.DELETE
@@ -24,14 +25,17 @@ class TokenResourceImpl : TokenResource {
 	@Inject
 	lateinit var tokenService: TokenService
 
+	@RolesAllowed(user)
 	@POST
 	override fun createToken(@PathParam("projectId") projectId: UUID): Token = tokenService.generateToken(projectId)
 
+	@RolesAllowed(user)
 	@DELETE
 	override fun removeToken(@PathParam(value = "projectId") projectId: UUID, @QueryParam("token") token: String) {
 		tokenService.removeToken(projectId, token)
 	}
 
+	@RolesAllowed(user)
 	@GET
 	override fun listProjectTokens(@PathParam("projectId") projectId: UUID): List<Token> =
 			tokenService.listByProject(projectId)

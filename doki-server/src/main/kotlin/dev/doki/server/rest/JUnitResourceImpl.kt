@@ -4,8 +4,10 @@ import dev.doki.api.JSON
 import dev.doki.api.JUnitResource
 import dev.doki.api.V1_API_PREFIX
 import dev.doki.model.junit.JunitTestSuite
+import dev.doki.server.service.TokenService
 import org.eclipse.microprofile.openapi.annotations.Operation
 import java.util.UUID
+import javax.inject.Inject
 import javax.ws.rs.Consumes
 import javax.ws.rs.PUT
 import javax.ws.rs.Path
@@ -18,6 +20,10 @@ import javax.ws.rs.core.MediaType.APPLICATION_JSON
 @Produces(JSON)
 @Consumes(JSON)
 class JUnitResourceImpl : JUnitResource {
+
+	@Inject
+	lateinit var tokenService: TokenService
+
 	@PUT
 	@Operation(summary = "Submit JUnit reports")
 	override fun submitReports(
@@ -26,7 +32,7 @@ class JUnitResourceImpl : JUnitResource {
 			@QueryParam(value = "token")
 			token: String,
 			reports: List<JunitTestSuite>
-	): String {
+	): String = tokenService.doPrivileged(projectId, token) {
 		TODO()
 	}
 }

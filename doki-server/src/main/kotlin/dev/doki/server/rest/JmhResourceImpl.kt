@@ -31,8 +31,7 @@ class JmhResourceImpl : JmhResource {
 			@PathParam("projectId") projectId: UUID,
 			@QueryParam("token") token: String,
 			reports: List<JmhBenchmarkResult>
-	): String {
-		tokenService.checkToken(projectId, token)
+	): String  = tokenService.doPrivileged(projectId, token) {
 		TODO()
 	}
 

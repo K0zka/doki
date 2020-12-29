@@ -25,7 +25,7 @@ val MongoClient.cucumber: MongoCollection<Document> get() = this.database.getCol
 val MongoClient.junit: MongoCollection<Document> get() = this.database.getCollection("junit")
 
 inline fun <reified T> MongoCollection<Document>.getById(id: String) =
-		read<T>(this.find(BasicDBObject("_id", id)).single())
+		read<T>(this.find(BasicDBObject("_id", id)).singleOrNull() ?: throw IllegalArgumentException("Entity by id $id does not exist"))
 
 inline fun <reified T> MongoCollection<Document>.listBy(property: String, value: String) =
 		this.find(BasicDBObject(property, value)).map { read<T>(it) }.toList()
