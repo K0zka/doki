@@ -5,6 +5,8 @@ import com.mongodb.BasicDBObject
 import com.mongodb.client.MongoClient
 import com.mongodb.client.MongoCollection
 import com.mongodb.client.MongoDatabase
+import com.mongodb.client.result.DeleteResult
+import com.mongodb.client.result.InsertOneResult
 import dev.doki.server.quarkus.RegisterCustomModuleCustomizer
 import org.bson.Document
 
@@ -24,7 +26,7 @@ val MongoClient.cucumber: MongoCollection<Document> get() = this.database.getCol
 
 val MongoClient.junit: MongoCollection<Document> get() = this.database.getCollection("junit")
 
-inline fun <reified T> MongoCollection<Document>.getById(id: String) =
+inline fun <reified T> MongoCollection<Document>.getById(id: String): T =
 		read<T>(this.find(BasicDBObject("_id", id)).singleOrNull() ?: throw IllegalArgumentException("Entity by id $id does not exist"))
 
 inline fun <reified T> MongoCollection<Document>.listBy(property: String, value: String) =
@@ -33,11 +35,11 @@ inline fun <reified T> MongoCollection<Document>.listBy(property: String, value:
 inline fun <reified T> MongoCollection<Document>.listBy(properties: Map<String, String>) =
 		this.find(BasicDBObject(properties)).map { read<T>(it) }.toList()
 
-inline fun MongoCollection<Document>.deleteBy(properties: Map<String, String>) =
+inline fun MongoCollection<Document>.deleteBy(properties: Map<String, String>): DeleteResult =
 		this.deleteOne(BasicDBObject(properties))
 
-fun <T> MongoCollection<Document>.insert(entity: T) =
+fun <T> MongoCollection<Document>.insert(entity: T): InsertOneResult =
 		insertOne(Document.parse(objectMapper.writeValueAsString(entity)))
 
-inline fun <reified T> read(doc: Document) =
+inline fun <reified T> read(doc: Document): T =
 		objectMapper.readValue<T>(doc.toJson(), T::class.java)
