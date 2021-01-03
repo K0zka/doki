@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DokiProjectApiService } from '../doki-project-api.service'
 
 @Component({
   selector: 'app-new-project',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewProjectComponent implements OnInit {
 
-  constructor() { }
+  constructor(private projectService : DokiProjectApiService) { }
 
   ngOnInit(): void {
+  }
+
+  createProject() {
+    this.projectService.createProject(null).subscribe( (data)=> {
+      // WHAT?
+    });
   }
 
 }

@@ -1,1 +1,17 @@
-<p>new-project works!</p>
+<form>
+  <h2>New Project</h2>
+  <div class="form-group">
+    <label for="projectName">Project Name</label>
+    <input type="email" class="form-control" id="projectName" aria-describedby="projectNameHelp" placeholder="Project Name">
+    <small id="projectNameHelp" class="form-text text-muted">Unique name for your project</small>
+  </div>
+
+  <div class="form-group">
+    <label for="projectUrl">Project URL</label>
+    <input type="email" class="form-control" id="projectUrl" aria-describedby="projectUrlHelp" placeholder="URL">
+    <small id="projectUrlHelp" class="form-text text-muted">Link to your project</small>
+  </div>
+
+  <button type="button" (click)="createProject()" class="btn btn-primary">Submit</button>
+
+</form>
