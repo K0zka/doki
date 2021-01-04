@@ -16,6 +16,11 @@ import { GatlingReportComponent } from './gatling-report/gatling-report.componen
 import { HttpClientModule } from '@angular/common/http';
 import { NewProjectComponent } from './new-project/new-project.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { JunitReportListComponent } from './junit-report-list/junit-report-list.component';
+import { CucumberReportListComponent } from './cucumber-report-list/cucumber-report-list.component';
+import { JmhReportListComponent } from './jmh-report-list/jmh-report-list.component';
+import { GatlingReportListComponent } from './gatling-report-list/gatling-report-list.component';
+import { ProjectListComponent } from './project-list/project-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     JmhReportComponent,
     GatlingReportComponent,
     NewProjectComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    JunitReportListComponent,
+    CucumberReportListComponent,
+    JmhReportListComponent,
+    GatlingReportListComponent,
+    ProjectListComponent
   ],
   imports: [
     BrowserModule,
